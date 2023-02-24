@@ -1,14 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
-/* 
-    font-family: 'Montserrat', sans-serif; 
+/*
+    Global Configs
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
 
 :root {
     --bgcolor: #000;
     --decopri: #b28756;
     --colorfont: #fff;
     --menusele: #d3d3d3;
-    
+
+    --descColor: #ccc;
+    --bgDefLight: #f7f7f7;
+    --titColorLight: #000;
+    --bgDefDark: #000;
+    --titColorDark: #fff; 
 }
 
 * {
@@ -20,6 +27,74 @@
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+.button {
+    display: inline-block;
+    background-color: var(--decopri);
+    color: var(--colorfont);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+/*
+    Section Templates
+*/
+
+.default {
+    background-color: red;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.default .section-title,
+.default .section-desc {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.default .section-title {
+    font-size: 22px;
+}
+
+.default .section-desc {
+    font-size: 14px;
+    color: var(--descColor);
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.default .section-body {
+    max-width: 1140px;
+    margin: auto;
+    min-height: 100px;
+}
+
+.default.light {
+    background-color: var(--bgDefLight);
+}
+
+.default.light .section-title {
+    color: var(--titColorLight);
+}
+
+.default.dark {
+    background-color: var(--bgDefDark);
+}
+
+.default.dark .section-title {
+    color: var(--titColorDark);
+}
+
+/*
+    Header
+*/
 
 header {
     height: 100px;
@@ -47,6 +122,10 @@ header {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+/*
+    Menu
+*/
 
 .menu {
     flex: 1;
@@ -77,8 +156,6 @@ header {
     border-bottom: 5px solid var(--bgcolor); /* for box-sizing: border-box */
 }
 
-
-
 .menu li a:hover {
     border-bottom: 5px solid var(--decopri);
     color: var(--menusele);
@@ -88,27 +165,103 @@ header {
     border-bottom: 5px solid var(--decopri);
 }
 
+/*
+    Banner - Sliders
+*/
 
+.banner {
+    height: calc(100vh - 100px);
+    background-color: #131313;
+    background-image: url(../image/bg.jpg);
+    background-size: cover;
+    background-position: bottom;
+    overflow: hidden; /* O que ultrapassa esconde */
+}
 
+.banner .sliders {
+    width: 1000vw;
+    height: 100%;
+}
 
+.banner .slider {
+    width: calc(100vw + 4px);
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-left: -4px;
+}
 
+.banner .slidearea {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: var(--colorfont);
+}
 
+.banner h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+}
 
+.banner span {
+    color: var(--decopri);
+}
 
+.banner h2 {
+    text-transform: uppercase;
+    margin-top: 20px;
+}
 
+.banner .sliders-pointers {
+    width: 100vw;
+    height: 20px;
+    position: absolute;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+}
 
+.banner .pointer {
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--decopri);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer; /* colocar o mouse em cima */
+}
 
+.banner .pointer.active {
+    background-color: var(--decopri);
+}
 
+/*
+    Section: About us
+*/
 
+.section-aboutus {
+    display: flex;
+}
 
+.section-aboutus--left {
+    flex: 1;
+}
 
+.section-aboutus--left p {
+    font-size: 14px;
+    line-height: 25px;
+}
 
+.section-aboutus--right {
+    width: 520px;
+    text-align: center;
+}
 
-
-
-
-
-
-
+.section-aboutus--right img {
+    width: 480px;
+    box-shadow: 15px 15px 15px #aaa9a9;
+}
 
 
