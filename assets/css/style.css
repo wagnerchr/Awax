@@ -319,6 +319,28 @@ header {
     height: 65px
 }
 
+.section-service .sliders-pointers {
+    width: 100vw;
+    height: 20px;
+    position: absolute;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+}
+
+.section-service  .pointer {
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--decopri);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer; /* colocar o mouse em cima */
+}
+
+.section-service .pointer.active {
+    background-color: var(--decopri);
+}
+
 /*
     Section: Projects
 */
@@ -424,9 +446,23 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    background-color: #000;
+  
 }
+
+.team-background {
+    height: calc(100vh - 100px);
+    background-color: #131313;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)
+    ), url("/media/foto4.jpg");
+    background-size: cover;
+    background-position: bottom;
+    overflow: hidden; /* O que ultrapassa esconde */
+    
+    background-repeat: no-repeat;
+}
+
 
 .section-team--coworkers {
     width: 300vw;
@@ -482,6 +518,31 @@ header {
     border-radius: 30px;
 }
 
+.marked {
+    background-color: var(--decopri);
+}
+
+.section-team .sliders-pointers {
+    width: 100vw;
+    height: 20px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.section-team  .pointer {
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--decopri);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer; /* colocar o mouse em cima */
+}
+
+.section-team .pointer.active {
+    background-color: var(--decopri);
+}
+
 /*
     Sectio: Reviews
 */
@@ -516,4 +577,25 @@ header {
 
 .section-reviews--comment img {
     margin-bottom: 10px;
+}
+
+.section-reviews .sliders-pointers {
+    width: 100vw;
+    height: 20px;
+    display: absolute;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+.section-reviews .pointer {
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--decopri);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer; /* colocar o mouse em cima */
+}
+
+.section-reviews .pointer.active {
+    background-color: var(--decopri);
 }
