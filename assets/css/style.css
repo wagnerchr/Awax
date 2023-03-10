@@ -415,3 +415,105 @@ header {
     display: flex;
     cursor: pointer;
 }
+
+/*
+    Section: Team
+*/
+
+.section-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #000;
+}
+
+.section-team--coworkers {
+    width: 300vw;
+    max-width: 1140px;
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section-team--coworkers p {
+    font-size: 14px;
+}
+
+.section-team--coworkers h2 {
+    color: var(--titColorLight);
+    font-family: 'Montserrat';
+}
+
+.section-team--coworker {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    align-items: center;
+
+    margin: 30px;
+
+    background-color: var(--bgDefLight);
+}
+
+.section-team--coworkerphoto {
+    margin: 30px;
+}
+
+.section-team--coworker-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-team--socialmedia {
+    display: flex;
+    margin: 40px;
+}
+
+.section-team--socialmedia-photoarea{
+    background-color: var(--descColorDark);
+    padding: 7px 10px;
+
+    margin: 2px;
+    border-radius: 30px;
+}
+
+/*
+    Sectio: Reviews
+*/
+
+.section-reviews {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.section-reviews--clientinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 25px;
+}
+
+
+.section-reviews--comment { 
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+
+
+    align-items: center;
+    line-height: 25px;
+    text-align: center;
+    color: var(--fgFiltroProj);
+}
+
+.section-reviews--comment img {
+    margin-bottom: 10px;
+}
