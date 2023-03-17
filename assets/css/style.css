@@ -442,106 +442,107 @@ header {
     Section: Team
 */
 
-.section-team {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-}
-
-.team-background {
-    height: calc(100vh - 100px);
-    background-color: #131313;
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.8),
-        rgba(0, 0, 0, 0.8)
-    ), url("/media/foto4.jpg");
+.bg-team {
+    background-image: url('../image/bg.jpg');
     background-size: cover;
-    background-position: bottom;
-    overflow: hidden; /* O que ultrapassa esconde */
-    
-    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0;
+}
+
+.section-team-area {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section-team {
+    overflow: hidden;
+    max-width: 880px;
+    margin: auto;
+}
+
+.section-team .sliders {
+    width: 1000vw;
+    height: 100%;
+}
+
+.section-team .slide {
+    width: 280px;
+    height: 100%;
+    min-height: 300px;
+    display: inline-block;
+    background-color: var(--fgColor);
+    margin-right: 20px;
 }
 
 
-.section-team--coworkers {
-    width: 300vw;
-    max-width: 1140px;
+.section-team .slidearea {
     display: flex;
-    flex-direction: row;
-
-    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
     justify-content: center;
-}
-
-.section-team--coworkers p {
-    font-size: 14px;
-}
-
-.section-team--coworkers h2 {
+    align-items: center;
     color: var(--titColorLight);
-    font-family: 'Montserrat';
+    padding: 30px;
 }
 
-.section-team--coworker {
-    display: flex;
-    flex-direction: column;
-    width: 320px;
-    align-items: center;
-
-    margin: 30px;
-
-    background-color: var(--bgDefLight);
-}
-
-.section-team--coworkerphoto {
-    margin: 30px;
-}
-
-.section-team--coworker-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.section-team--socialmedia {
-    display: flex;
-    margin: 40px;
-}
-
-.section-team--socialmedia-photoarea{
-    background-color: var(--descColorDark);
-    padding: 7px 10px;
-
-    margin: 2px;
-    border-radius: 30px;
-}
-
-.marked {
-    background-color: var(--decopri);
-}
-
-.section-team .sliders-pointers {
-    width: 100vw;
+.section-team-area .sliders-pointers {
+    margin-top: 30px;
     height: 20px;
-    margin-top: 200px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.section-team  .pointer {
+.section-team-area .pointer {
     width: 15px;
     height: 15px;
     border: 2px solid var(--decopri);
     border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer; /* colocar o mouse em cima */
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
 }
 
-.section-team .pointer.active {
+.section-team-area .pointer.active {
     background-color: var(--decopri);
 }
+
+.section-team--name {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 30px;
+}
+
+.section-team--role {
+    font-size: 14px;
+    color: var(--textService);
+    margin-top: 5px;
+}
+
+.section-team--social {
+    display: flex;
+    margin-top: 25px;
+    
+}
+
+.section-team--social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: var(--destaMenu);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.section-team--social a:hover {
+    background-color: var(--decopri);
+
+}
+
 
 /*
     Sectio: Reviews
@@ -598,4 +599,4 @@ header {
 
 .section-reviews .pointer.active {
     background-color: var(--decopri);
-}
+} */
