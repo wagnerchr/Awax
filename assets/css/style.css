@@ -626,3 +626,70 @@ header {
 .section-testimonials .pointer.active {
     background-color: var(--decopri);
 }
+
+/*
+    Section - Companies
+*/
+
+.section-companies {
+    border-top: 1px solid var(--linFiltroProj);
+    border-bottom: 1px solid var(--linFiltroProj);
+}
+
+.section-companies--area {
+    display: flex;
+    align-items: center;
+}
+
+.section-company {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+}
+
+.section-company img{
+    margin-top: 20px;
+}
+
+/*
+    Section - Price
+*/
+
+.section-price {
+    display: flex;
+}
+
+.section-price--item {
+    flex: 1;
+    background-color: var(--bgDefLight);
+    margin-right: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.section-price--item:last-child {
+    margin-right: 0;
+}
+
+.section-price--item-name{
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.section-price--item-money {
+    font-weight: bold;
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+.section-price--item-period {
+    color: var(--textService);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.section-price--item-point {
+    font-size: 12px;
+}
+
